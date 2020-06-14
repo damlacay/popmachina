@@ -33,6 +33,13 @@ body {
   height: 80vh;
 }
 
+#logoSvg {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  height: 70px;
+}
+
 #legend {
   height: 70vh;
   position: fixed;

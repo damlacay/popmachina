@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset='utf-8' />
-    <title>Pop-Machina City Passports</title>
+    <title>Points on a map v02</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
@@ -10,12 +10,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+
     <div id = "mapSpace">
       <div id='map'></div>
       <div id="legend"> 
         <img src="legend.svg" id="legendSvg">
       </div>
       <button id="legendButton" class onclick = "toggleLegend()">Info</button>
+      <img src="logo.svg" id="logoSvg">
     </div>
   </body>
   <script type="text/javascript" src="javaScript.js"></script>

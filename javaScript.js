@@ -8,18 +8,21 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZGFtbGFjYXkiLCJhIjoiY2s4MDJjdnY5MGF3ejNubXdhe
     // code from the next step will go here
     map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
-    layers: ['popmachina-yali'] // replace this with the name of the layer
+    layers: ['initiative passports'] // replace this with the name of the layer
   });
 
   if (!features.length) {
     return;
   }
-
   var feature = features[0];
+
+  var icon = feature.properties.passport + ".svg";
+
+  var dummy = "<img class = 'popUp_img' src=" + icon + ">";
 
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
     .setLngLat(feature.geometry.coordinates)
-    .setHTML('<h3>' + feature.properties.stakeholderName + '</h3><p>' + feature.properties.address + '</p>')
+    .setHTML('<h3>' + feature.properties.stakeholderName + '</h3><p>' + feature.properties.address + '</p>' + dummy)
     .addTo(map);
 });
 
